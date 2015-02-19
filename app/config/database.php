@@ -49,9 +49,9 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'strada',
-			'username'  => 'root',
-			'password'  => 'not4anyone',
+			'database'  => 'webmumu1_strada',
+			'username'  => 'webmumu1_strada',
+			'password'  => 'webmumu1_strada',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
