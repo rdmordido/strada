@@ -1,0 +1,65 @@
+@charset "utf-8";
+/* CSS Document */
+
+@font-face{font-family: 'HelveticaBold';src:url(../fonts/HelveticaBold.otf);}
+@font-face{font-family: 'Helvetica Cond';src:url(../fonts/HelveticaCondensed.otf);}
+
+
+body{background:#FFF;margin:0;padding:0;font-family:Helvetica Cond, Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;}
+div{position:relative;}
+strong{font-weight:bold}
+a{text-decoration:none}
+a:hover{text-decoration:none;color:inherit}
+
+.wrapper{max-width:1180px;margin:0 auto;}
+.clear:after,.wrapper:after{content:" ";visibility:hidden;clear:both;display:block;height:0px;}
+.align-right{text-align:right;}
+
+/* navigation */
+#navigation{background:#6f8270;min-height:30px;border-bottom:9px #39513a solid;font-weight:700;width:100%;position:fixed;top:0px;z-index:10}
+#navigation a{color:#FFF;text-decoration:none;display:block;font-size:16px;font-weight:700;padding:38px 0px;max-height:98px;font-family:HelveticaBold;transition: background 0.5s ease;}
+#navigation a:hover{background:#39513a;transition: background 0.5s ease;}
+#navigation #logo{float:left;width:380px;margin-top:10px;}
+#navigation #nav{margin-left:390px;}
+#navigation #nav ul{list-style:none;margin:0px;}
+#navigation #nav ul li{width:25%;text-align:center;float:left;display:block;}
+#navigation a.active{background:#39513a;}
+
+/* banner */
+#banner{background:#FFF;margin-top:106px;}
+#banner #the-banner{background:url(../img/banner.jpg) no-repeat;height:825px;background-position:center -166px;}
+#banner #the-banner #banner-text{position:absolute;text-align:center;width:650px;left:50%;margin-left:-325px;bottom:60px;color:#FFF;z-index:1}
+#banner #the-banner #banner-text h1{color:#FFF;font-size:125px;font-weight:bold;font-family:'HelveticaBold'}
+#banner #the-banner #banner-text h2{font-size:55px;}
+#banner #the-banner #banner-text h3{font-size:36px;}
+#banner #the-banner #banner-text  p{font-size:24px;}
+#banner .social-media-icons{float:left;color:#0090c1;margin-top:50px;}
+#banner .mitsubishi-logo{float:right}
+#banner #banner-footer{bottom:15px;position:absolute;width:100%;padding:0px 20px;}
+
+.title{background:#39513a;border-left:15px #283928 solid;color:#FFF;padding:14px 0px 14px 10px;}
+.title h1{font-size:26px;margin:0px;font-family:'HelveticaBold';}
+
+.btn{background:#0090c1;transition: background 0.5s ease;font-family:'HelveticaBold';font-weight:bold;color:#FFF;font-size:24px;padding:10px 50px;}
+.btn:hover{background:#1ab2e6;transition: background 0.5s ease;color:#FFF;}
+.register-btn{display:inline-block;font-family:'HelveticaBold';font-weight:bold;color:#FFF;background:#0090c1;font-size:26px;padding:3px 6px;transition: background 0.5s ease;}
+.register-btn:hover{background:#1ab2e6; transition: background 0.5s ease;}
+
+/* registration */
+#registration{background:#6f8270;font-family:'Helvetica Cond';color:#FFF;font-size:16px;font-weight:normal;padding-bottom:30px;}
+#registration label{font-weight:normal;}
+#registration .small{font-size:14px;margin-bottom:2px;}
+#registration .form-title{margin:20px 20px 15px;}
+#registration .form-submit-btn{position:absolute;bottom:0px;right:0px;}
+
+/* features */
+#features{background:#bebaba;}
+/* mechanics */
+#mechanics .mechanics-text{padding:40px 60px;}
+#mechanics ol{list-style:decimal;margin-left:30px;line-height:1.4em;}
+#mechanics ul{list-style:disc;margin-left:30px;line-height:1.4em;}
+#mechanics li{margin-top:10px;}
+#mechanics h4{font-weight:bold;}
+
+/* footer */
+#footer{padding-bottom:50px;}

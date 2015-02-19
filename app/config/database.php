@@ -51,7 +51,7 @@ return array(
 			'host'      => 'localhost',
 			'database'  => 'strada',
 			'username'  => 'root',
-			'password'  => '',
+			'password'  => 'not4anyone',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
