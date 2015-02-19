@@ -9,6 +9,28 @@ class AjaxController extends BaseController {
 	public function getBranchByLocationId($id){
 		return $this->branch_model->where('location_id',$id)->get();
 	}
+
+	public function postLogin(){
+		$login_data = Input::get();
+        $validator 	= Validator::make($login_data,array('username' => 'required','password' => 'required'));
+
+        if($validator->passes()){
+            
+            $username 		= $login_data['username'];
+            $password 		= $login_data['password'];
+            $remember_me 	= (isset($login_data['remember_me'])) ? true : false;
+
+            if (Auth::attempt(array('username' => $username, 'password' => $password, 'role_id' => 1),$remember_me)){
+            	return Response::json(['success' => true]);
+            }else{
+                $error_message = 'Incorrect username or password';
+                return Response::json(['success'=>false,'error_message'=>$error_message]);
+            }
+        }else{
+            $error_message = 'Username and password are required';
+            return Response::json(['success'=>false,'error_message'=>$error_message]);
+        }
+	}
 	
 	public function postRegister(){
 		$data = Input::get();		

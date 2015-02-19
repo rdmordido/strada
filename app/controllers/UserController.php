@@ -15,17 +15,13 @@ class UserController extends BaseController {
 		return View::make('login');
 	}
 	
-	public function login(){
-
-	}
-
 	public function showRegister(){
 		$this->data['locations'] = $this->location_model->all();
 		return View::make('register',$this->data);
 	}
 
-	public function register(){
-		
+	public function logout(){
+		Auth::logout();
+		return Redirect::to('/login');
 	}
-
 }

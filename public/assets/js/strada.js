@@ -1,3 +1,27 @@
+$('form#login').submit(function(e){
+
+    $.ajax({
+            type    : 'post',
+            url     : '/ajax/login',
+            data    : $(this).serialize(),
+            dataType: 'json',
+            success : function(result){
+               if(result.success){
+                    $('#admin-login-alert').removeClass('alert-danger');
+                    $('#admin-login-alert').addClass('alert-success');
+                    $('#admin-login-alert p').html('<strong>Success!</strong> Redirecting..');
+                    $('#admin-login-alert').show();
+                    window.location = '/users';
+                }else{                        
+                    $('#admin-login-alert p').html(result.error_message);
+                    $('#admin-login-alert').addClass('alert-danger');
+                    $('#admin-login-alert').show();
+                }
+            }
+        });
+    e.preventDefault();
+});
+
 $('form#register').submit(function(e){
 
 	$.ajax({
