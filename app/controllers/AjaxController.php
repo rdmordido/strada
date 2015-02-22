@@ -39,7 +39,7 @@ class AjaxController extends BaseController {
 					,'firstname' 	=> 'required'
 					,'address' 		=> 'required'
 					,'phone' 		=> 'required'
-					,'email' 		=> 'required|unique:email'
+					,'email' 		=> 'required|unique:users,email'
 					,'age' 			=> 'required'
 					,'occupation' 	=> 'required'
 					,'or_number' 	=> 'required'
