@@ -40,8 +40,8 @@ a:hover{text-decoration:none;color:inherit}
 .title{background:#39513a;border-left:15px #283928 solid;color:#FFF;padding:14px 0px 14px 10px;}
 .title h1{font-size:26px;margin:0px;font-family:'HelveticaBold';}
 
-.btn{background:#0090c1;transition: background 0.5s ease;font-family:'HelveticaBold';font-weight:bold;color:#FFF;font-size:24px;padding:10px 50px;}
-.btn:hover{background:#1ab2e6;transition: background 0.5s ease;color:#FFF;}
+.custom-btn{background:#0090c1;transition: background 0.5s ease;font-family:'HelveticaBold';font-weight:bold;color:#FFF;font-size:24px;padding:10px 50px;}
+.custom-btn:hover{background:#1ab2e6;transition: background 0.5s ease;color:#FFF;}
 .register-btn{display:inline-block;font-family:'HelveticaBold';font-weight:bold;color:#FFF;background:#0090c1;font-size:26px;padding:3px 6px;transition: background 0.5s ease;}
 .register-btn:hover{background:#1ab2e6; transition: background 0.5s ease;}
 

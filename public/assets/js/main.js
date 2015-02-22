@@ -59,9 +59,21 @@ $('form#register').submit(function(e){
                     if(undefined != result.error_message.address) { show_form_group_error('address',result.error_message.address); }
                     if(undefined != result.error_message.phone) { show_form_group_error('phone',result.error_message.phone); }
                     if(undefined != result.error_message.email) { show_form_group_error('email',result.error_message.email); }
+                    if(undefined != result.error_message.age) { show_form_group_error('age',result.error_message.age); }
+                    if(undefined != result.error_message.occupation) { show_form_group_error('occupation',result.error_message.occupation); }
+                    if(undefined != result.error_message.or_number) { show_form_group_error('or_number',result.error_message.or_number); }
+                    if(undefined != result.error_message.branch_code) { show_form_group_error('branch_code',result.error_message.branch_code); }
                     if(undefined != result.error_message.area) { show_form_group_error('area',result.error_message.area); }
                     if(undefined != result.error_message.dealer) { show_form_group_error('dealer',result.error_message.dealer); }
                     if(undefined != result.error_message.model) { show_form_group_error('model',result.error_message.model); }
+                    if(undefined != result.error_message.sales) { show_form_group_error('sales',result.error_message.sales); }
+                    if(undefined != result.error_message.color1) { show_form_group_error('color1',result.error_message.color1); }
+                    if(undefined != result.error_message.color2) { show_form_group_error('color2',result.error_message.color2); }
+                    if(undefined != result.error_message.color3) { show_form_group_error('color3',result.error_message.color3); }
+                    if(undefined != result.error_message.current_brand_model) { show_form_group_error('current_brand_model',result.error_message.current_brand_model); }
+                    if(undefined != result.error_message.like_most) { show_form_group_error('like_most',result.error_message.like_most); }
+                    if(undefined != result.error_message.other_brand_model) { show_form_group_error('other_brand_model',result.error_message.other_brand_model); }
+                    if(undefined != result.error_message.learn_source) { show_form_group_error('learn_source',result.error_message.learn_source); }
                 }
             }
         });
@@ -129,9 +141,10 @@ clear_form_register = function(){
 	$('#address').val('');
 	$('#phone').val('');
 	$('#email').val('');
+    $('#age').val('');
 	$('#occupation').val('');
-	$('#family').val('');
-	$('#learn').val('');
+    $('#or_number').val('');
+    $('#branch_code').val('');
 	$('#area').val('');
 	$('#dealer').html('<option value="">Dealer</option>');
 	$('#model').val('');
@@ -139,12 +152,10 @@ clear_form_register = function(){
 	$('#color1').val('');
 	$('#color2').val('');
 	$('#color3').val('');
-	$('#price').val('');
-	$('#size').val('');
-	$('#design').val('');
-	$('#features').val('');
-	$('#brand').val('');
-	$('#other_models').val('');
+	$('#current_brand_model').val('');
+    $('#like_most').val('');
+	$('#other_brand_model').val('');
+    $('#learn_source').val('');
 	
 }
 });
