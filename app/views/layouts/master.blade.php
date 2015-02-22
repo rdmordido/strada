@@ -30,7 +30,7 @@
                 <ul class="clear">
                     <li><a href="javascript:;" id="btn-home" data-href="banner">HOME</a></li>
                     <li><a href="javascript:;" id="btn-reg" data-href="registration">REGISTRATION</a></li>
-                    <li><a href="javascript:;" id="btn-feat" data-href="features">STRADA FEATURES</a></li>
+                    <li><a href="javascript:;" id="btn-feat" data-href="stradafeatures">STRADA FEATURES</a></li>
                     <li><a href="javascript:;" id="btn-mec" data-href="mechanics">PROMO MECHANICS</a></li>
                 </ul>
             </div>

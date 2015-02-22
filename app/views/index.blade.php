@@ -37,29 +37,18 @@
                 <form id="register">
                     <div class="clear">
                         <div class="col-md-6">
-                            <!-- coupon code and or number -->
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <input type="text" id="coupon" name="coupon" class="form-control" placeholder="Coupon Code" />
-                                    </div>    
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <input type="text" id="reservation" name="reservation" class="form-control" placeholder="Reservation OR Number" />
-                                    </div>  
-                                </div>
-                            </div>
                             <!-- names -->
                             <div class="row">
                                 <div class="col-md-5">
                                     <div class="form-group">
-                                        <input type="text" id="lastname" name="lastname" class="form-control" placeholder="Last Name*" />
+                                        <label style="display:none;" class="control-label" for="lastname"></label>
+                                        <input type="text" id="lastname" name="lastname" class="form-control" placeholder="Last Name" />
                                     </div>    
                                 </div>
                                 <div class="col-md-5">
                                     <div class="form-group">
-                                        <input type="text" id="firstname" name="firstname" class="form-control" placeholder="First Name*" />
+                                        <label style="display:none;" class="control-label" for="firstname"></label>
+                                        <input type="text" id="firstname" name="firstname" class="form-control" placeholder="First Name" />
                                     </div>  
                                 </div>
                                  <div class="col-md-2">
@@ -72,7 +61,8 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <input type="text" id="address" name="address" class="form-control" placeholder="Address " />
+                                        <label style="display:none;" class="control-label" for="address"></label>
+                                        <input type="text" id="address" name="address" class="form-control" placeholder="Address" />
                                     </div>    
                                 </div>
                             </div>
@@ -80,25 +70,33 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <input type="text" id="phone" name="phone" class="form-control" placeholder="Contact Number*" />
+                                        <label style="display:none;" class="control-label" for="phone"></label>
+                                        <input type="text" id="phone" name="phone" class="form-control" placeholder="Contact Number" />
                                     </div>    
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <input type="email" id="email" name="email"email class="form-control" placeholder="Email*" />
+                                        <label style="display:none;" class="control-label" for="email"></label>
+                                        <input type="email" id="email" name="email"email class="form-control" placeholder="Email" />
                                     </div>  
                                 </div>
                             </div>
                             <!-- civil status and gender -->
                             <div class="row">
-                                <div class="col-md-6">
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label style="display:none;" class="control-label" for="age"></label>
+                                        <input id="age" name="age" type="text" class="form-control" placeholder="Age">
+                                    </div>  
+                                </div>
+                                <div class="col-md-5">
                                     <div class="form-group">
                                         Civil Status &nbsp;&nbsp;
                                         <label><input type="radio" name="civil_status" value="single" checked/> Single</label>
                                         <label><input type="radio" name="civil_status" value="married"/> Married</label>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-5">
                                     <div class="form-group">
                                         Gender  &nbsp;&nbsp;
                                         <label><input type="radio" name="gender" value="male" checked/> Male</label>
@@ -110,34 +108,25 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
+                                        <label style="display:none;" class="control-label" for="occupation"></label>
                                         <input type="text" id="occupation" name="occupation" class="form-control" placeholder="Occupation/Industry" />
                                     </div>    
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <input type="text" id="family" name="family" class="form-control" placeholder="No. of immediate family members" />
+                                        <label style="display:none;" class="control-label" for="or_number"></label>
+                                        <input type="text" id="or_number" name="or_number" class="form-control" placeholder="OR Number" />
                                     </div>  
                                 </div>
                             </div>
-                            <!-- where did you learn strada robert? tell me robert where? -->
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <select id="learn_source" name="learn_source" class="form-control">
-                                            <option value="">Where did you learn about the Mirage G4?</option>
-                                            <option value="Friends/Family">Friends/Family</option>
-                                            <option value="Print Ad">Print Ad</option>
-                                            <option value="Billboard/Flyer">Billboard/Flyer</option>
-                                            <option value="TV">TV</option>
-                                          </select>
-                                        </select>
+                                        <label style="display:none;" class="control-label" for="branch_code"></label>
+                                        <input type="text" id="branch_code" name="branch_code" class="form-control" placeholder="Control Code (provided by dealer)">
                                     </div>    
                                 </div>
                             </div>
-                        </div>
-                        <!-- end of first column -->                        
-                        <div class="col-md-6">
-                            <!-- coupon code and or number -->
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
@@ -152,18 +141,20 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label style="display:none;" class="control-label" for="area"></label>
+                                        <label style="display:none;" class="control-label" for="dealer"></label>
                                         <select id="dealer" name="dealer" class="form-control">
                                             <option value="">Dealer</option>
                                         </select>
                                     </div> 
                                 </div>
                             </div>
-                            <!-- names -->
+                        </div>
+
+                        <div class="col-md-6">                            
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label style="display:none;" class="control-label" for="area"></label>
+                                        <label style="display:none;" class="control-label" for="model"></label>
                                         <select id="model" name="model" class="form-control">
                                             <option value="">Preferred model/Variant</option>
                                             <option value="GL 4x2 M/T">GL 4x2 M/T</option>
@@ -177,17 +168,18 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
+                                        <label style="display:none;" class="control-label" for="sales"></label>
                                         <input type="text" id="sales" name="sales" class="form-control" placeholder="Sales Executive" />
                                     </div>  
                                 </div>
-                            </div>
-                            <!-- address -->
+                            </div>                            
                             <div class="row">
                                 <div class="col-md-12">
                                     <p class="small">Top 3 color choices: (choose from the colors below)</p>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
+                                        <label style="display:none;" class="control-label" for="color1"></label>
                                         <label class="small">1st Priority</label>
                                         <select id="color1" name="color1" class="form-control">
                                             <option value="">Select Color</option>
@@ -200,6 +192,7 @@
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
+                                        <label style="display:none;" class="control-label" for="color2"></label>
                                         <label class="small">2nd Priority</label>
                                         <select id="color2" name="color2" class="form-control">
                                             <option value="">Select Color</option>
@@ -212,8 +205,9 @@
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
+                                        <label style="display:none;" class="control-label" for="color3"></label>
                                         <label class="small">3rd Priority</label>
-                                        <select id="color2" name="color2" class="form-control">
+                                        <select id="color3" name="color3" class="form-control">
                                             <option value="">Select Color</option>
                                             <option value="Gemstone Grey Mica">Gemstone Grey Mica</option>
                                             <option value="Pyrenese Black">Pyrenese Black</option>
@@ -223,94 +217,35 @@
                                     </div>    
                                 </div>
                             </div>
-                            <!-- email and contact number -->
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <select id="car_order" name="car_order" class="form-control">
-                                            <option value="">Is this your first, second or replacement car?</option>
-                                            <option value="First">First</option>
-                                            <option value="Replacement">Replacement</option>
-                                            <option value="Additional">Additional</option>
-                                        </select>
+                                        <label style="display:none;" class="control-label" for="current_brand_model"></label>
+                                        <input id="current_brand_model" name="current_brand_model" type="text" class="form-control question" placeholder="Are you a current pick-up owner? If yes, what brand and model?">
                                     </div>    
                                 </div>
                             </div>
-                            <!-- civil status and gender -->
                             <div class="row">
                                 <div class="col-md-12">
-                                    <p class="small">Please rank each feature of the Strada based on your personal preference. 1 = Highest, 5 = Lowest</p>
-                                </div>
-                                <div class="col-md-2">
                                     <div class="form-group">
-                                        <label class="small">Price</label>
-                                        <select id="price" name="price" class="form-control">
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
-                                        </select>
-                                    </div>    
-                                </div>
-                                <div class="col-md-2">
-                                    <div class="form-group">
-                                        <label class="small">Design</label>
-                                        <select id="design" name="design" class="form-control">
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
-                                        </select>
-                                    </div>    
-                                </div>
-                                <div class="col-md-2">
-                                    <div class="form-group">
-                                        <label class="small">Size</label>
-                                        <select id="size" name="size" class="form-control">
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
-                                        </select>
-                                    </div>    
-                                </div>
-                                <div class="col-md-2">
-                                    <div class="form-group">
-                                        <label class="small">Features</label>
-                                        <select id="features" name="features" class="form-control">
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
-                                        </select>
-                                    </div>    
-                                </div>
-                                <div class="col-md-2">
-                                    <div class="form-group">
-                                        <label class="small">Brand</label>
-                                        <select id="brand" name="brand" class="form-control">
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
-                                        </select>
+                                        <label style="display:none;" class="control-label" for="like_most"></label>
+                                        <input id="like_most" name="like_most" type="text" class="form-control question" placeholder="What you like most about the Strada?">
                                     </div>    
                                 </div>
                             </div>
-                            <!-- occupation and immediate family members -->
-                        </div>
-                        <!-- end of second column -->
-                        <div class="col-md-12"> 
                             <div class="row">
                                 <div class="col-md-12">
-                                    <p class="small">Which other car models are you considering to purchase? Separate multiple entries with a comma.</p>
                                     <div class="form-group">
-                                        <input type="text" id="other_models" name="other_models" class="form-control" placeholder="Occupation/Industry" />
+                                        <label style="display:none;" class="control-label" for="other_brand_model"></label>
+                                        <input id="other_brand_model" name="other_brand_model" type="text" class="form-control question" placeholder="Did you check out another pick-up brand? If yes, what brand and model?">
+                                    </div>    
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label style="display:none;" class="control-label" for="learn_source"></label>
+                                        <input id="learn_source" name="learn_source" type="text" class="form-control question" placeholder="Where did you learn about the Strada?">
                                     </div>    
                                 </div>
                             </div>
@@ -320,13 +255,13 @@
                         <img src="/assets/img/vehicles.png" width="100%" />
                     </div>
                     <div class="form-submit-btn">
-                        <button type="submit" class="btn">SEND</button>
+                        <button type="submit" class="custom-btn">SEND</button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
-    <div id="features" class="fullscreen">
+    <div id="stradafeatures" class="fullscreen">
         <div class="wrapper">
             <div class="title">
                 <h1>FEATURES</h1>

@@ -18,7 +18,7 @@ Route::get('/register','UserController@showRegister');
 Route::controller('ajax', 'AjaxController');
 
 /*Admin Page Routes*/
-Route::group(array('before' => 'auth.admin'), function()
+Route::group(array('before' => 'auth.admin'), function()    
 {
 	Route::get('/users','UserController@index');
 });

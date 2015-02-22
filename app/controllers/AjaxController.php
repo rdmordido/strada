@@ -1,5 +1,5 @@
 <?php
-
+use SoapBox\Formatter\Formatter;
 class AjaxController extends BaseController {
 
 	public function __construct(){
@@ -40,26 +40,65 @@ class AjaxController extends BaseController {
 					,'address' 		=> 'required'
 					,'phone' 		=> 'required'
 					,'email' 		=> 'required'
+					,'age' 			=> 'required'
+					,'occupation' 	=> 'required'
+					,'or_number' 	=> 'required'
+					,'branch_code' 	=> 'required'
 					,'area' 		=> 'required'
 					,'dealer' 		=> 'required'
+					,'sales' 		=> 'required'
 					,'model' 		=> 'required'
+					,'sales' 		=> 'required'
+					,'color1' 		=> 'required'
+					,'color2' 		=> 'required'
+					,'color3' 		=> 'required'
+					,'current_brand_model' 	=> 'required'
+					,'like_most' 			=> 'required'
+					,'other_brand_model' 	=> 'required'
+					,'learn_source' 		=> 'required'
 				);
-
 		$validator = Validator::make($data,$validation_rules);
 
 		if($validator->passes()){
+
+				/*chech for correct branch code for dealer*/
+				$dealer = Branch::where('code',$data['branch_code'])->first();
+
+				if($dealer == false || $dealer->code != $data['dealer'])
+					return Response::json(array('success' => false,'error_message' => array('branch_code'=>'Control code mismatch')));
+
 				$newUser = $this->user_model->register($data);
+
 				if($newUser){
 
-					/*Send Email to Dealers*/
-					$dealer 	= Branch::where('code',$newUser->dealer)->first();
-					$mail_data 	= array('user'=>$newUser);
+					$html = "Dear {ucfirst($newUser->firstname)}<p></br></br>";
+					$html .= "You have successfully registered for the All-new 2015 Mitsubishi Strada Pre-Order Savings Exclusive. Below is the summary of your registration details:";
+					$html .= "<table>";
+					$html .= "<tr><td>Name</td><td>{ucfirst($newUser->firstname)}&nbsp{ucfirst($newUser->lastname)}</td></tr>";
+					$html .= "<tr><td>Address</td><td>{ucfirst($newUser->addres)}</td></tr>";
+					$html .= "<tr><td>OR number</td><td>{strtoupper($newUser->firstname)}</td></tr>";
+					$html .= "<tr><td>Contact number</td><td>{$newUser->firstname}</td></tr>";
+					$html .= "<tr><td>Color of vehicle</td><td>{$newUser->color1}</td></tr>";
+					$html .= "<tr><td>Model of vehicle</td><td>{$newUser->model}</td></tr>";
+					$html .= "<tr><td>Dealer/Branch</td><td>{$dealer->name}</td></tr>";
+					$html .= "</table>";
+					$html .= "<p>-REFERENCE CODE ({$newUser->reference_code})</p>";
+					$html .= "<p>";
+					$html .= "Make sure to purchase your reserved Mitsubishi Strada on or before April 30, 2015.</br>";
+					$html .= "For questions and concerns you may contact us through allnewstradaph@gmail.com";
+					$html .= "</p>";
+					$html .= "Thank you!";
 
-					$mail = Mail::send('emails.registration',$mail_data, function($message) use($dealer,$newUser){
-						$message->subject('New Registration');
-					    $message->from($newUser->email);
-					    $message->to($dealer->email);
-					});
+					/*Send Email to Dealers*/					
+					//$sender 	= $newUser->email;
+					//$recepient 	= $dealer->email;
+					$sender 	= 'robmordido@gmail.com';
+					$recepient 	= 'rdmordido@gmail.com';
+					$headers  	= "From: {$sender}\r\n"; 
+			    	$headers 	.= "Content-type: text/html\r\n"; 
+					$subject 	= "New User Registration";
+					$message 	= $html;
+					$email 		= mail($recepient, $subject, $message, $headers); 
 					
 					return Response::json(array('success' => true,'data' => $newUser));
 				}
