@@ -71,18 +71,18 @@ class AjaxController extends BaseController {
 
 				if($newUser){
 
-					$html = "Dear {ucfirst($newUser->firstname)}<p></br></br>";
+					$html = "Dear ".ucfirst($newUser->firstname)."<p></br></br>";
 					$html .= "You have successfully registered for the All-new 2015 Mitsubishi Strada Pre-Order Savings Exclusive. Below is the summary of your registration details:";
 					$html .= "<table>";
-					$html .= "<tr><td>Name</td><td>{ucfirst($newUser->firstname)}&nbsp{ucfirst($newUser->lastname)}</td></tr>";
-					$html .= "<tr><td>Address</td><td>{ucfirst($newUser->addres)}</td></tr>";
-					$html .= "<tr><td>OR number</td><td>{strtoupper($newUser->firstname)}</td></tr>";
-					$html .= "<tr><td>Contact number</td><td>{$newUser->firstname}</td></tr>";
-					$html .= "<tr><td>Color of vehicle</td><td>{$newUser->color1}</td></tr>";
-					$html .= "<tr><td>Model of vehicle</td><td>{$newUser->model}</td></tr>";
-					$html .= "<tr><td>Dealer/Branch</td><td>{$dealer->name}</td></tr>";
+					$html .= "<tr><td>Name</td><td>".ucfirst($newUser->firstname)." ".ucfirst($newUser->lastname)."</td></tr>";
+					$html .= "<tr><td>Address</td><td>".ucfirst($newUser->addres)."</td></tr>";
+					$html .= "<tr><td>OR number</td><td>".strtoupper($newUser->or_number)."</td></tr>";
+					$html .= "<tr><td>Contact number</td><td>".$newUser->phone."</td></tr>";
+					$html .= "<tr><td>Color of vehicle</td><td>".$newUser->color1."</td></tr>";
+					$html .= "<tr><td>Model of vehicle</td><td>".$newUser->model."</td></tr>";
+					$html .= "<tr><td>Dealer/Branch</td><td>".$dealer->name."</td></tr>";
 					$html .= "</table>";
-					$html .= "<p>-REFERENCE CODE ({$newUser->reference_code})</p>";
+					$html .= "<p>-REFERENCE CODE (".$newUser->reference_code.")</p>";
 					$html .= "<p>";
 					$html .= "Make sure to purchase your reserved Mitsubishi Strada on or before April 30, 2015.</br>";
 					$html .= "For questions and concerns you may contact us through allnewstradaph@gmail.com";
