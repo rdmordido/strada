@@ -26,6 +26,12 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 
 
 	public function register($data){
+		
+		/*Limit user registration to 1000 users per branch*/
+		$count = User::where('branch_code',$data['branch_code'])->count();
+		if($count > 1000)
+			return false;
+
 		$user = new User;
 		$user->lastname 		= (isset($data['lastname']) && !empty($data['lastname'])) 			? $data['lastname'] 		: null;
 		$user->firstname 		= (isset($data['firstname']) && !empty($data['firstname'])) 		? $data['firstname'] 		: null;

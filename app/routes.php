@@ -21,4 +21,5 @@ Route::controller('ajax', 'AjaxController');
 Route::group(array('before' => 'auth.admin'), function()    
 {
 	Route::get('/users','UserController@index');
+	Route::get('users/download','UserController@download');
 });

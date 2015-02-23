@@ -4,8 +4,11 @@
 	 <div id="list">
         <div class="wrapper">            
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-10">
                     <h2>Registered Users</h2>
+                </div>
+                <div class="col-md-2">
+                <a href="/users/download" target="_blank"><button type="button" class="btn btn-sm btn-default" title="Download CSV"><i class="fa fa-download"></i> Download CSV</button></a>
                 </div>
             </div>
 			<div class="table-responsive" style="overflow:hidden;">
