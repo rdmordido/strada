@@ -194,10 +194,11 @@
                                         <label class="small">1st Priority</label>
                                         <select id="color1" name="color1" class="form-control">
                                             <option value="">Select Color</option>
-                                            <option value="Gemstone Grey Mica">Gemstone Grey Mica</option>
-                                            <option value="Pyrenese Black">Pyrenese Black</option>
-                                            <option value="Aurora White">Aurora White</option>
-                                            <option value="Cool Silver">Cool Silver</option>
+                                            <option value="Impulse Blue Metallic">Impulse Blue Metallic</option>
+                                            <option value="Grayish Brown Metallic">Grayish Brown Metallic</option>
+                                            <option value="Titanium Gray Metallic">Titanium Gray Metallic</option>
+                                            <option value="Red Solid">Red Solid</option>
+                                            <option value="White Solid">White Solid</option>
                                         </select>
                                     </div>    
                                 </div>
@@ -207,10 +208,11 @@
                                         <label class="small">2nd Priority</label>
                                         <select id="color2" name="color2" class="form-control">
                                             <option value="">Select Color</option>
-                                            <option value="Gemstone Grey Mica">Gemstone Grey Mica</option>
-                                            <option value="Pyrenese Black">Pyrenese Black</option>
-                                            <option value="Aurora White">Aurora White</option>
-                                            <option value="Cool Silver">Cool Silver</option>
+                                            <option value="Impulse Blue Metallic">Impulse Blue Metallic</option>
+                                            <option value="Grayish Brown Metallic">Grayish Brown Metallic</option>
+                                            <option value="Titanium Gray Metallic">Titanium Gray Metallic</option>
+                                            <option value="Red Solid">Red Solid</option>
+                                            <option value="White Solid">White Solid</option>
                                         </select>
                                     </div>    
                                 </div>
@@ -220,10 +222,11 @@
                                         <label class="small">3rd Priority</label>
                                         <select id="color3" name="color3" class="form-control">
                                             <option value="">Select Color</option>
-                                            <option value="Gemstone Grey Mica">Gemstone Grey Mica</option>
-                                            <option value="Pyrenese Black">Pyrenese Black</option>
-                                            <option value="Aurora White">Aurora White</option>
-                                            <option value="Cool Silver">Cool Silver</option>
+                                            <option value="Impulse Blue Metallic">Impulse Blue Metallic</option>
+                                            <option value="Grayish Brown Metallic">Grayish Brown Metallic</option>
+                                            <option value="Titanium Gray Metallic">Titanium Gray Metallic</option>
+                                            <option value="Red Solid">Red Solid</option>
+                                            <option value="White Solid">White Solid</option>
                                         </select>
                                     </div>    
                                 </div>
