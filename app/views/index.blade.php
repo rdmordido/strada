@@ -44,7 +44,11 @@
 				<div class="alert alert-success alert-dismissable" style="display:none;">
                     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
                     <strong>Success!</strong> You have been registered
-                </div>                
+                </div>
+                <div class="alert alert-danger alert-dismissable" style="display:none;">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                    Please fill up all fields
+                </div>
                 <form id="register">
                     <div class="clear">
                         <div class="col-md-6">

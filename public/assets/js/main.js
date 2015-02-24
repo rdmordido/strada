@@ -46,35 +46,15 @@ $('form#register').submit(function(e){
             data 	: $(this).serialize(),
             dataType: 'json',
             success : function(result){
-            	$('div.form-group.has-error label').hide();
-                $('div.form-group.has-error').removeClass('has-error');
-
                 if(result.success){
                     clear_form_register();
+                    $('.alert-danger').hide();
                     $('.alert-success').show();
                 }else{
                     $('.alert-success').hide();
-                    if(undefined != result.error_message.lastname) { show_form_group_error('lastname',result.error_message.lastname); }
-                    if(undefined != result.error_message.firstname) { show_form_group_error('firstname',result.error_message.firstname); }
-                    if(undefined != result.error_message.address) { show_form_group_error('address',result.error_message.address); }
-                    if(undefined != result.error_message.phone) { show_form_group_error('phone',result.error_message.phone); }
-                    if(undefined != result.error_message.email) { show_form_group_error('email',result.error_message.email); }
-                    if(undefined != result.error_message.age) { show_form_group_error('age',result.error_message.age); }
-                    if(undefined != result.error_message.occupation) { show_form_group_error('occupation',result.error_message.occupation); }
-                    if(undefined != result.error_message.or_number) { show_form_group_error('or_number',result.error_message.or_number); }
-                    if(undefined != result.error_message.branch_code) { show_form_group_error('branch_code',result.error_message.branch_code); }
-                    if(undefined != result.error_message.area) { show_form_group_error('area',result.error_message.area); }
-                    if(undefined != result.error_message.dealer) { show_form_group_error('dealer',result.error_message.dealer); }
-                    if(undefined != result.error_message.model) { show_form_group_error('model',result.error_message.model); }
-                    if(undefined != result.error_message.sales) { show_form_group_error('sales',result.error_message.sales); }
-                    if(undefined != result.error_message.color1) { show_form_group_error('color1',result.error_message.color1); }
-                    if(undefined != result.error_message.color2) { show_form_group_error('color2',result.error_message.color2); }
-                    if(undefined != result.error_message.color3) { show_form_group_error('color3',result.error_message.color3); }
-                    if(undefined != result.error_message.current_brand_model) { show_form_group_error('current_brand_model',result.error_message.current_brand_model); }
-                    if(undefined != result.error_message.like_most) { show_form_group_error('like_most',result.error_message.like_most); }
-                    if(undefined != result.error_message.other_brand_model) { show_form_group_error('other_brand_model',result.error_message.other_brand_model); }
-                    if(undefined != result.error_message.learn_source) { show_form_group_error('learn_source',result.error_message.learn_source); }
+                    $('.alert-danger').show();
                 }
+                $('html, body').stop().animate({scrollTop: $('#registration').offset().top - 106}, 1000,'easeOutQuart');
             }
         });
 	e.preventDefault();
