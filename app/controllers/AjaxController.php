@@ -73,7 +73,7 @@ class AjaxController extends BaseController {
 
 					/*Send Email to Registered User*/
 					$user_email = "Dear ".ucfirst($newUser->firstname)."<p></br></br>";
-					$user_email .= "You have successfully registered for the All-new 2015 Mitsubishi Strada Pre-Order Savings Exclusive. Below is the summary of your registration details:";
+					$user_email .= "You have successfully registered for the All-new Mitsubishi Strada Pre-Order Savings Exclusive. Below is the summary of your registration details:";
 					$user_email .= "<table>";
 					$user_email .= "<tr><td>Name:</td><td>".ucfirst($newUser->firstname)." ".ucfirst($newUser->lastname)."</td></tr>";
 					$user_email .= "<tr><td>Address:</td><td>".ucfirst($newUser->address)."</td></tr>";
@@ -90,7 +90,7 @@ class AjaxController extends BaseController {
 					$user_email .= "</p>";
 					$user_email .= "Thank you!";
 
-					$sender 	= 'no-reply@allnewstrada.ph';
+					$sender 	= 'allnewstrada.ph';
 					$recepient 	= $newUser->email;
 					$headers  	= "From: {$sender}\r\n"; 
 					$headers 	.= "Content-type: text/html\r\n"; 
@@ -99,7 +99,7 @@ class AjaxController extends BaseController {
 					$email 		= mail($recepient, $subject, $message, $headers);
 
 					/*Send Email to Dealers*/
-					$dealer_email = "New User Registration";
+					$dealer_email = "New User Registration<p></br></br>";
 					$dealer_email .= "<table>";
 					$dealer_email .= "<tr><td>Name:</td><td>".ucfirst($newUser->firstname)." ".ucfirst($newUser->lastname)."</td></tr>";
 					$dealer_email .= "<tr><td>Address:</td><td>".ucfirst($newUser->address)."</td></tr>";
@@ -116,7 +116,7 @@ class AjaxController extends BaseController {
 					$dealer_email .= "</p>";
 					$dealer_email .= "Thank you!";
 
-					$sender 	= 'no-reply@allnewstrada.ph';
+					$sender 	= 'allnewstrada.ph';
 					//$recepient 	= $dealer->email;
 					$recepient 	= 'robmordido@gmail.com';
 					$headers  	= "From: {$sender}\r\n"; 
