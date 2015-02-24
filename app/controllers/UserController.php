@@ -97,4 +97,44 @@ class UserController extends \BaseController {
 		return Redirect::to('/login');
 	}
 
+	public function download(){
+		
+		  $data 	= User::where('role_id',3)->orderBy('branch_code','created_at')->get();
+		  $columns 	= array(
+		  				'branch_code'
+		  				,'lastname'
+		  				,'firstname'
+		  				,'m.i'
+		  				,'address'
+		  				,'phone'
+		  				,'email'
+		  				,'age'
+		  				,'gender'
+		  				,'civil_status'
+		  				,'occupation'
+		  				,'or_number'
+		  				,'created_at'
+		  			);
+		  $labels 	= array(
+		  				'Branch Code'
+		  				,'Last Name'
+		  				,'First Name'
+		  				,'M.I'
+		  				,'Address'
+		  				,'Contact Number'
+		  				,'Email Address'
+		  				,'Age'
+		  				,'Gender'
+		  				,'Civil Status'
+		  				,'Occupation'
+		  				,'OR Number'
+		  				,'Date Registered'
+		  			);
+		  $options 	= array(
+						 'filename' => 'allnewstrada.csv'
+						,'columns' 	=> $columns
+						,'firstRow' => $labels
+		  				);
+		  return BaseController::downloadCSV($data, $options);
+	}
 }

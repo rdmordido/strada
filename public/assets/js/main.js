@@ -91,7 +91,7 @@ $('#area').change(function(e){
             	var options = '<option value="">Dealer</option>';
                 if(locations.length > 0){
                 	$.each(locations,function(i,location){
-                		options += '<option value="'+location.code+'">'+$.ucfirst(location.name.toLowerCase())+' ('+location.company+')</option>';
+                		options += '<option value="'+location.code+'">'+location.name+' ('+location.company+')</option>';
                 	});
                 	
                 	$('#dealer').html(options);

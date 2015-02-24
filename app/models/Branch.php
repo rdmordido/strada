@@ -11,4 +11,8 @@ class Branch extends Eloquent {
 	public function location(){
 		return $this->belongsTo('Location');
 	}
+
+	public function users(){
+		return $this->hasMany('User');
+	}
 }
