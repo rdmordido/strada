@@ -309,7 +309,6 @@
                     <li>Reservation must be done from February 25 to March 22, 2015 only.</li>
                     
                     <li>Vehicle must be purchased on or before April 30, 2015. End of business hours</li>
-                    
                     </ol>
                     <h4>Pre-Order Savings Exclusive Registration</h4>
                     
@@ -335,6 +334,8 @@
                                 <li>Did you check out other pick-up models? If yes, what brand and model?</li>
                                 <li>Where did you learn about the all-new 2015 Mitsubishi Strada?</li>
                             </ul>
+                            
+                            <p>Note: Customers who made reservation payments but fail to register online will have their Php 55,000 Pre-Order Savings Exclusive forfeited.</p>
                         </li>
                         <li>After registration, the customer will receive an acknowledgment e-mail with the following details:
                             <ul>
