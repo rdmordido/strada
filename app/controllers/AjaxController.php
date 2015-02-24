@@ -90,7 +90,7 @@ class AjaxController extends BaseController {
 					$user_email .= "</p>";
 					$user_email .= "Thank you!";
 
-					$sender 	= 'allnewstrada.ph';
+					$sender 	= 'allnewstrada.ph <no-reply@allnewstrada.ph>';
 					$recepient 	= $newUser->email;
 					$headers  	= "From: {$sender}\r\n"; 
 					$headers 	.= "Content-type: text/html\r\n"; 
@@ -116,7 +116,7 @@ class AjaxController extends BaseController {
 					$dealer_email .= "</p>";
 					$dealer_email .= "Thank you!";
 
-					$sender 	= 'allnewstrada.ph';
+					$sender 	= 'allnewstrada.ph <no-reply@allnewstrada.ph>';
 					//$recepient 	= $dealer->email;
 					$recepient 	= 'robmordido@gmail.com';
 					$headers  	= "From: {$sender}\r\n"; 
