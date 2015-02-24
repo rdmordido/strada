@@ -71,33 +71,59 @@ class AjaxController extends BaseController {
 
 				if($newUser){
 
-					$html = "Dear ".ucfirst($newUser->firstname)."<p></br></br>";
-					$html .= "You have successfully registered for the All-new 2015 Mitsubishi Strada Pre-Order Savings Exclusive. Below is the summary of your registration details:";
-					$html .= "<table>";
-					$html .= "<tr><td>Name:</td><td>".ucfirst($newUser->firstname)." ".ucfirst($newUser->lastname)."</td></tr>";
-					$html .= "<tr><td>Address:</td><td>".ucfirst($newUser->address)."</td></tr>";
-					$html .= "<tr><td>OR number:</td><td>".strtoupper($newUser->or_number)."</td></tr>";
-					$html .= "<tr><td>Contact number:</td><td>".$newUser->phone."</td></tr>";
-					$html .= "<tr><td>Color of vehicle:</td><td>".$newUser->color1."</td></tr>";
-					$html .= "<tr><td>Model of vehicle:</td><td>".$newUser->model."</td></tr>";
-					$html .= "<tr><td>Dealer/Branch:</td><td>".$dealer->name."</td></tr>";
-					$html .= "</table>";
-					$html .= "<p>-REFERENCE CODE (".$newUser->reference_code.")</p>";
-					$html .= "<p>";
-					$html .= "Make sure to purchase your reserved Mitsubishi Strada on or before April 30, 2015.</br>";
-					$html .= "For questions and concerns you may contact us through allnewstradaph@gmail.com";
-					$html .= "</p>";
-					$html .= "Thank you!";
-
 					/*Send Email to Registered User*/
+					$user_email = "Dear ".ucfirst($newUser->firstname)."<p></br></br>";
+					$user_email .= "You have successfully registered for the All-new 2015 Mitsubishi Strada Pre-Order Savings Exclusive. Below is the summary of your registration details:";
+					$user_email .= "<table>";
+					$user_email .= "<tr><td>Name:</td><td>".ucfirst($newUser->firstname)." ".ucfirst($newUser->lastname)."</td></tr>";
+					$user_email .= "<tr><td>Address:</td><td>".ucfirst($newUser->address)."</td></tr>";
+					$user_email .= "<tr><td>OR number:</td><td>".strtoupper($newUser->or_number)."</td></tr>";
+					$user_email .= "<tr><td>Contact number:</td><td>".$newUser->phone."</td></tr>";
+					$user_email .= "<tr><td>Color of vehicle:</td><td>".$newUser->color1."</td></tr>";
+					$user_email .= "<tr><td>Model of vehicle:</td><td>".$newUser->model."</td></tr>";
+					$user_email .= "<tr><td>Dealer/Branch:</td><td>".$dealer->name."</td></tr>";
+					$user_email .= "</table>";
+					$user_email .= "<p>-REFERENCE CODE (".$newUser->reference_code.")</p>";
+					$user_email .= "<p>";
+					$user_email .= "Make sure to purchase your reserved Mitsubishi Strada on or before April 30, 2015.</br>";
+					$user_email .= "For questions and concerns you may contact us through allnewstradaph@gmail.com";
+					$user_email .= "</p>";
+					$user_email .= "Thank you!";
+
 					$sender 	= 'no-reply@allnewstrada.ph';
 					$recepient 	= $newUser->email;
-					//$sender 	= 'robmordido@gmail.com';
-					//$recepient 	= 'rdmordido@gmail.com';
 					$headers  	= "From: {$sender}\r\n"; 
-			    	        $headers 	.= "Content-type: text/html\r\n"; 
+					$headers 	.= "Content-type: text/html\r\n"; 
 					$subject 	= "All New Strada Registration";
-					$message 	= $html;
+					$message 	= $user_email;
+					$email 		= mail($recepient, $subject, $message, $headers);
+
+					/*Send Email to Dealers*/
+					$dealer_email = "New User Registration";
+					$dealer_email .= "<table>";
+					$dealer_email .= "<tr><td>Name:</td><td>".ucfirst($newUser->firstname)." ".ucfirst($newUser->lastname)."</td></tr>";
+					$dealer_email .= "<tr><td>Address:</td><td>".ucfirst($newUser->address)."</td></tr>";
+					$dealer_email .= "<tr><td>OR number:</td><td>".strtoupper($newUser->or_number)."</td></tr>";
+					$dealer_email .= "<tr><td>Contact number:</td><td>".$newUser->phone."</td></tr>";
+					$dealer_email .= "<tr><td>Color of vehicle:</td><td>".$newUser->color1."</td></tr>";
+					$dealer_email .= "<tr><td>Model of vehicle:</td><td>".$newUser->model."</td></tr>";
+					$dealer_email .= "<tr><td>Dealer/Branch:</td><td>".$dealer->name."</td></tr>";
+					$dealer_email .= "</table>";
+					$dealer_email .= "<p>-REFERENCE CODE (".$newUser->reference_code.")</p>";
+					$dealer_email .= "<p>";
+					$dealer_email .= "Make sure to purchase your reserved Mitsubishi Strada on or before April 30, 2015.</br>";
+					$dealer_email .= "For questions and concerns you may contact us through allnewstradaph@gmail.com";
+					$dealer_email .= "</p>";
+					$dealer_email .= "Thank you!";
+
+					$sender 	= 'no-reply@allnewstrada.ph';
+					//$recepient 	= $dealer->email;
+					$recepient 	= 'robmordido@gmail.com';
+					$headers  	= "From: {$sender}\r\n"; 
+					$headers 	.= "Content-type: text/html\r\n"; 
+					$headers 	.= "Bcc: rdmordido@gmail.com\r\n";
+					$subject 	= "All New Strada Registration";
+					$message 	= $dealer_email;
 					$email 		= mail($recepient, $subject, $message, $headers); 
 					
 					return Response::json(array('success' => true,'data' => $newUser));
