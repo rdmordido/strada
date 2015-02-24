@@ -1,6 +1,6 @@
 $(document).ready(function(e) {
 	// the navigation
-	$('#nav a').click(function(){
+	$('#nav a,.register-btn').click(function(){
 		var href = $(this).data('href');
 		var self = $(this);
 		$('#nav a').removeClass('active');
@@ -39,7 +39,7 @@ $('form#login').submit(function(e){
 });
 
 $('form#register').submit(function(e){
-
+	$('#pleaseWait').show();
 	$.ajax({
             type    : 'post',
             url     : '/ajax/register',
@@ -55,7 +55,10 @@ $('form#register').submit(function(e){
                     $('.alert-danger').show();
                 }
                 $('html, body').stop().animate({scrollTop: $('#registration').offset().top - 106}, 1000,'easeOutQuart');
-            }
+            },
+			complete: function(){
+				$('#pleaseWait').hide();
+			}
         });
 	e.preventDefault();
 });

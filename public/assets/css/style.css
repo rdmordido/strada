@@ -63,3 +63,7 @@ a:hover{text-decoration:none;color:inherit}
 
 /* footer */
 #footer{padding-bottom:50px;}
+
+/* please wait */
+#pleaseWait{position:fixed;z-index:100;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.5);display:none;}
+#pleaseWaitText{position:fixed;width:500px;height:40px;background:#FFF;left:50%;top:45%;margin-left:-250px;text-align:center;padding-top:10px;}

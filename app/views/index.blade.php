@@ -298,7 +298,7 @@
             </div>
             <div class="content">
                 <div class="mechanics-text">
-                    <h4>2015 All-new Mitsubishi Strada Pre-Order Savings Exclusive Reservation</h4>
+                    <h4>All-new Mitsubishi Strada Pre-Order Savings Exclusive Reservation</h4>
                     <ol>
                     <li>Customers who make a reservation payment of Php 10,000 for the All-New Mitsubishi Strada AND register in the Pre-Order Savings Exclusive registration site are entitled to a Php 55,000 Pre-Order Savings Exclusive. This effectively reserves their unit and ensures priority in delivery of their preferred color and variant once available. The Php 10,000 reservation payment will be deducted from the SRP.
                     </li>
