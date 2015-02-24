@@ -22,7 +22,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	 * @var array
 	 */
 	protected $hidden = array('password', 'remember_token');
-	protected $appends = array('reference_code');
+	//protected $appends = array('reference_code');
 
 
 	public function register($data){
@@ -56,14 +56,16 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 		$user->like_most 			= (isset($data['like_most']) && !empty($data['like_most'])) 						? $data['like_most'] 			: null;
 		$user->other_brand_model 	= (isset($data['other_brand_model']) && !empty($data['other_brand_model'])) 		? $data['other_brand_model'] 	: null;
 		$user->learn_source 		= (isset($data['learn_source']) && !empty($data['learn_source'])) 					? $data['learn_source'] 		: null;
+		$user->reference_code 		= $this->generateReferenceCode($user->branch_code);
 		if($user->save())
 			return $user;
 		else
 			return false;
 	}
 
-	public function getReferenceCodeAttribute(){
-		return $this->branch_code.'-'.sprintf("%04d",$this->id);
+	public function generateReferenceCode($branch_code){
+		$user_count = User::where('branch_code',$branch_code)->count() + 1;
+		return $branch_code.'-'.sprintf("%04d",$user_count);
 	}
 
 	public function role(){

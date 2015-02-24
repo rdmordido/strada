@@ -39,7 +39,8 @@ class CreateUsersTable extends Migration {
 			$table->string('current_brand_model')->nullable();
 			$table->string('like_most')->nullable();
 			$table->string('other_brand_model')->nullable();
-			$table->string('learn_source')->nullable();			
+			$table->string('learn_source')->nullable();
+			$table->string('reference_code')->nullable();			
 			$table->rememberToken();
 			$table->timestamps();
 			$table->foreign('role_id')->references('id')->on('roles');

@@ -30,8 +30,8 @@
                 <ul class="clear">
                     <li><a href="javascript:;" id="btn-home" data-href="banner">HOME</a></li>
                     <li><a href="javascript:;" id="btn-reg" data-href="registration">REGISTRATION</a></li>
-                    <li><a href="javascript:;" id="btn-feat" data-href="stradafeatures">STRADA FEATURES</a></li>
                     <li><a href="javascript:;" id="btn-mec" data-href="mechanics">PROMO MECHANICS</a></li>
+                    <li><a href="javascript:;" id="btn-feat" data-href="features">STRADA FEATURES</a></li>
                 </ul>
             </div>
         </div>
@@ -43,13 +43,14 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="footer-text">
+                            <!--
                             <h5>FOLLOW MITSUBISHI MOTORS PHILIPPINES</h5>
-                            <a href="#">FACEBOOK</a> | <a href="#">TWITTER</a> | <a href="#">INSTAGRAM</a>
+                             <a href="#">FACEBOOK</a> | <a href="#">TWITTER</a> | <a href="#">INSTAGRAM</a> -->
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="footer-text align-right">
-                            <h5>© Copyright Mitsubishi Motors Philippines 2013.</h5>
+                            <h5>© Copyright Mitsubishi Motors Philippines 2015.</h5>
                         </div>
                     </div>
                 </div>

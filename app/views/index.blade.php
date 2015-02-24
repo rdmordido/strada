@@ -305,14 +305,14 @@
                     
                     <li>The Php 55,000 Pre-Order Savings Exclusive can be redeemed in the same Mitsubishi Motors dealership where the reservation payment was made.
                         <ul>
-                            <li>The Php 55,000 Pre-Order Savings incentive can be deducted in the down payment OR divided in the monthly amortization.</li>
+                            <li>The Php 55,000 Pre-Order Savings exclusive can be deducted from the down payment, OR divided in the monthly amortization.</li>
                         </ul>
                     
                     </li>
                     
-                    <li>Reservation must be done from February 25 to March 22, 2015 only.</li>
+                    <li>Reservation must be made from February 25 to March 22, 2015 only.</li>
                     
-                    <li>Vehicle must be purchased on or before April 30, 2015. End of business hours</li>
+                    <li>The all-new Strada must be purchased on or before April 30, 2015 end of business hours.</li>
                     </ol>
                     <h4>Pre-Order Savings Exclusive Registration</h4>
                     
@@ -333,13 +333,17 @@
                                 <li>Sales Executive</li>
                                 <li>Preferred Model / Variant</li>
                                 <li>Top 3 Color Choices</li>
-                                <li>Are you a current pick-up owner?   If yes, what brand and model?</li>
-                                <li>What do you like most about the all-new 2015 Mitsubishi Strada?</li>
-                                <li>Did you check out other pick-up models? If yes, what brand and model?</li>
-                                <li>Where did you learn about the all-new 2015 Mitsubishi Strada?</li>
+                                <li>Answer these simple surveys:
+                                	<ul>
+                                        <li>Are you a current pick-up owner?   If yes, what brand and model?</li>
+                                        <li>What do you like most about the all-new 2015 Mitsubishi Strada?</li>
+                                        <li>Did you check out other pick-up models? If yes, what brand and model?</li>
+                                        <li>Where did you learn about the all-new 2015 Mitsubishi Strada?</li>
+                                    </ul>
+                                </li>
                             </ul>
                             
-                            <p>Note: Customers who made reservation payments but fail to register online will have their Php 55,000 Pre-Order Savings Exclusive forfeited.</p>
+                            <!-- <p>Note: Customers who made reservation payments but fail to register online will have their Php 55,000 Pre-Order Savings Exclusive forfeited.</p> -->
                         </li>
                         <li>After registration, the customer will receive an acknowledgment e-mail with the following details:
                             <ul>
@@ -358,10 +362,10 @@
                         <li>Deadline for online registration for the Pre-Order Exclusive will be on March 22, 2015 at 11:59PM.</li>
                     
                     </oL>
-                    <p>All employees of Mitsubishi Motors Philippines Corporation, Beginnings Communications, Inc. and all employees of participating Mitsubishi dealers, including their relatives up to the second degree of affinity or consanguinity are disqualified from joining the promotion.</p>
+                    <!-- <p>All employees of Mitsubishi Motors Philippines Corporation, Beginnings Communications, Inc. and all employees of participating Mitsubishi dealers, including their relatives up to the second degree of affinity or consanguinity are disqualified from joining the promotion.</p> -->
                     
                     
-                    <p>Per DTI FTEB SPD Permit Number      , Series of 2015.</p>
+                    <p>Per DTI FTEB SPD Permit Number 1490, Series of 2015.</p>
                 </div>
             </div>
         </div>
