@@ -63,6 +63,29 @@ $('form#register').submit(function(e){
 	e.preventDefault();
 });
 
+$('form#edituser').submit(function(e){
+    $('#pleaseWait').show();
+    $.ajax({
+            type    : 'post',
+            url     : '/ajax/edit-user',
+            data    : $(this).serialize(),
+            dataType: 'json',
+            success : function(result){
+                if(result.success){                    
+                    $('.alert-danger').hide();
+                    $('.alert-success').show();
+                }else{
+                    $('.alert-success').hide();
+                    $('.alert-danger').show();
+                }
+                $('html, body').stop().animate({scrollTop: $('#registration').offset().top - 106}, 1000,'easeOutQuart');
+            },
+            complete: function(){
+                $('#pleaseWait').hide();
+            }
+        });
+    e.preventDefault();
+});
 
 $('#area').change(function(e){
 	var location_id = $(this).val();
@@ -88,7 +111,7 @@ $('#area').change(function(e){
 
  $('#users-list').dataTable({
     "aoColumnDefs": [
-        { 'bSortable': false, 'aTargets': [ 0 ] }
+        { 'bSortable': false, 'aTargets': [ 0,7 ] }
     ]
 });
 

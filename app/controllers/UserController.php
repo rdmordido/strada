@@ -10,7 +10,7 @@ class UserController extends \BaseController {
 	public function index()
 	{
 		$this->data['users'] = $this->user_model->where('role_id',3)->get();
-		return View::make('userlist',$this->data);
+		return View::make('user.index',$this->data);
 	}
 
 
@@ -44,7 +44,8 @@ class UserController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		//
+		$this->data['user'] = User::find($id);
+		return View::make('user.show',$this->data);
 	}
 
 
@@ -56,7 +57,9 @@ class UserController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		//
+		$this->data['locations'] = $this->location_model->all();
+		$this->data['user'] = User::find($id);
+		return View::make('user.edit',$this->data);
 	}
 
 

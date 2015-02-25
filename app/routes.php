@@ -20,7 +20,7 @@ Route::controller('ajax', 'AjaxController');
 /*Admin Page Routes*/
 Route::group(array('before' => 'auth.admin'), function()    
 {
-	Route::get('/users','UserController@index');
+	Route::resource('/users','UserController');
 	Route::get('users/download','UserController@download');
 });
 

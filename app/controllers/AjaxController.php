@@ -72,6 +72,7 @@ class AjaxController extends BaseController {
 				if($newUser){
 
 					/*Send Email to Registered User*/
+					/*
 					$user_email = "Dear ".ucfirst($newUser->firstname)."<p></br></br>";
 					$user_email .= "You have successfully registered for the All-new Mitsubishi Strada Pre-Order Savings Exclusive. Below is the summary of your registration details:";
 					$user_email .= "<table>";
@@ -99,6 +100,7 @@ class AjaxController extends BaseController {
 					$email 		= mail($recepient, $subject, $message, $headers);
 
 					/*Send Email to Dealers*/
+					/*
 					$dealer_email = "New User Registration<p></br></br>";
 					$dealer_email .= "<table>";
 					$dealer_email .= "<tr><td>Name:</td><td>".ucfirst($newUser->firstname)." ".ucfirst($newUser->lastname)."</td></tr>";
@@ -125,7 +127,7 @@ class AjaxController extends BaseController {
 					$subject 	= "All New Strada Registration";
 					$message 	= $dealer_email;
 					$email 		= mail($recepient, $subject, $message, $headers); 
-					
+					*/
 					return Response::json(array('success' => true,'data' => $newUser));
 				}
 				else{
@@ -143,4 +145,60 @@ class AjaxController extends BaseController {
 		}
 	}
 
+	public function postEditUser(){
+		$data = Input::get();
+		$user = User::find($data['user_id']);
+		$validation_rules = array(
+					'user_id'				=> 'required'
+					,'reference_code'		=> ($data['reference_code'] == $user->reference_code) ? '' : 'required|unique:users,reference_code'
+					,'lastname'				=> 'required'
+					,'firstname' 			=> 'required'
+					,'address' 				=> 'required'
+					,'phone' 				=> 'required'
+					,'email' 				=> ($data['email'] == $user->email) ? '' : 'required|unique:users,email'
+					,'age' 					=> 'required'
+					,'occupation' 			=> 'required'
+					,'or_number' 			=> 'required'
+					,'branch_code' 			=> 'required'
+					,'area' 				=> 'required'
+					,'dealer' 				=> 'required'
+					,'sales' 				=> 'required'
+					,'model' 				=> 'required'
+					,'sales' 				=> 'required'
+					,'color1' 				=> 'required'
+					,'color2' 				=> 'required'
+					,'color3' 				=> 'required'
+					,'current_brand_model' 	=> 'required'
+					,'like_most' 			=> 'required'
+					,'other_brand_model' 	=> 'required'
+					,'learn_source' 		=> 'required'
+				);
+		$validator = Validator::make($data,$validation_rules);
+
+		if($validator->passes()){
+
+				/*chech for correct branch code for dealer*/
+				$dealer = Branch::where('code',$data['branch_code'])->first();
+
+				if($dealer == false || $dealer->code != $data['dealer'])
+					return Response::json(array('success' => false,'error_message' => array('branch_code'=>'Control code mismatch')));
+
+				$updateUser = $this->user_model->edit($data);
+				if($updateUser){
+					return Response::json(array('success' => true,'data' => $updateUser));
+				}
+				else{
+					return Response::json(array('success' => false,'error_message' => 'Something went wrong'));
+				}
+		}else{
+			$messages 		= $validator->messages();
+			$error_messages = array();
+			foreach($validation_rules as $key=>$rule){
+				if($rule != '' && $messages->has($key)){
+					$error_messages[$key] = $messages->first($key);
+				}
+			}
+			return Response::json(array('success' => false,'error_message' => $error_messages));
+		}
+	}
 }
