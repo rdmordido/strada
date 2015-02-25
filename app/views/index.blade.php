@@ -4,7 +4,7 @@
         <div class="wrapper">
             <div id="the-banner">
                 <div id="banner-text">
-                    <h1>P55,000</h1><ul></ul>
+                    <h1>₱55,000</h1>
                     <h2>Pre-Order Savings Exclusive</h2>
                     <h3>Reserve an all-new Mitsubishi Strada now!</h3>
                     <p>Pay a reservation fee of P10,000 from February 25 to March 22, 2015 to avail of the <strong>Pre-Order Exclusive</strong>.</p>
