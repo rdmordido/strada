@@ -35,7 +35,7 @@
                                 <td>{{$user->phone}}</td>
                                 <td>{{strtolower($user->email)}}</td>
                                 <td>{{date('M d, Y',strtotime($user->created_at))}}</td>
-                                <td><a href="/users/{{$user->id}}/edit">Edit</a> | <a class="btn-remove-user" href="javascript:;">Delete</a></td>
+                                <td><a href="/users/{{$user->id}}/edit">Edit</a> | <a user-id="{{$user->id}}" class="btn-remove-user" href="javascript:;">Delete</a></td>
                             </tr>
                             @endforeach
                         </tbody>

@@ -108,6 +108,25 @@ $('#area').change(function(e){
 	e.preventDefault();
 });
 
+$('.btn-remove-user').click(function(){
+    var user_id = $(this).attr('user-id');
+    var confirm = window.confirm("Remove this user?");
+    if(confirm){
+        $.ajax({
+            type    : 'delete',
+            url     : '/ajax/user/'+user_id,
+            dataType: 'json',
+            success : function(result){
+                if(result.success){
+                    window.location.reload();
+                }else
+                    alert('Error occured while trying to remove the user');
+            }
+        });
+    }else{
+        return false;
+    }
+});
 
  $('#users-list').dataTable({
     "aoColumnDefs": [

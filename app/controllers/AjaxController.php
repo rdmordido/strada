@@ -201,4 +201,9 @@ class AjaxController extends BaseController {
 			return Response::json(array('success' => false,'error_message' => $error_messages));
 		}
 	}
+
+	public function deleteUser($id){
+		$result = User::destroy($id);
+		return Response::json(array('success' => $result));
+	}
 }
