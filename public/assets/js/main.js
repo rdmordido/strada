@@ -88,6 +88,7 @@ $('form#edituser').submit(function(e){
 });
 
 $('#area').change(function(e){
+	$('#pleaseWait').show();
 	var location_id = $(this).val();
         $.ajax({
             type    : 'get',
@@ -102,6 +103,9 @@ $('#area').change(function(e){
                 	
                 	$('#dealer').html(options);
                 }
+            },
+            complete: function(){
+                $('#pleaseWait').hide();
             }
         });
 

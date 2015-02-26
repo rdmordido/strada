@@ -31,7 +31,7 @@
                     <li><a href="javascript:;" id="btn-home" data-href="banner">HOME</a></li>
                     <li><a href="javascript:;" id="btn-reg" data-href="registration">REGISTRATION</a></li>
                     <li><a href="javascript:;" id="btn-mec" data-href="mechanics">PROMO MECHANICS</a></li>
-                    <li><a href="javascript:;" id="btn-feat" data-href="stradafeatures">STRADA FEATURES</a></li>
+                    <li><a href="javascript:;" id="btn-feat" data-href="features">STRADA FEATURES</a></li>
                 </ul>
             </div>
         </div>
@@ -58,7 +58,7 @@
         </div>
     </div>
 	<div id="pleaseWait">
-    	<div id="pleaseWaitText">Please wait while your form is submitting...</div>
+    	<div id="pleaseWaitText">Please wait while we process your request...</div>
     </div>
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.js"></script>    
     <script type="text/javascript" src="/assets/js/bootstrap.js"></script>    
