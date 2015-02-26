@@ -101,10 +101,10 @@ class UserController extends \BaseController {
 	}
 
 	public function download(){
-		
 		  $data 	= User::where('role_id',3)->orderBy('branch_code','created_at')->get();
 		  $columns 	= array(
 		  				'branch_code'
+		  				,'reference_code'
 		  				,'lastname'
 		  				,'firstname'
 		  				,'m.i'
@@ -120,6 +120,7 @@ class UserController extends \BaseController {
 		  			);
 		  $labels 	= array(
 		  				'Branch Code'
+		  				,'Reference Code'
 		  				,'Last Name'
 		  				,'First Name'
 		  				,'M.I'
@@ -138,6 +139,6 @@ class UserController extends \BaseController {
 						,'columns' 	=> $columns
 						,'firstRow' => $labels
 		  				);
-		  return BaseController::downloadCSV($data, $options);
+		  return BaseController::downloadCSV($data, $options);		  
 	}
 }
