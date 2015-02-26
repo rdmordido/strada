@@ -57,7 +57,10 @@ class AjaxController extends BaseController {
 					,'other_brand_model' 	=> 'required'
 					,'learn_source' 		=> 'required'
 				);
-		$validator = Validator::make($data,$validation_rules);
+		$validation_messages = array(
+					 'email.unique' 		=> 'Email address already exist'
+				);
+		$validator = Validator::make($data,$validation_rules,$validation_messages);
 
 		if($validator->passes()){
 
@@ -65,14 +68,13 @@ class AjaxController extends BaseController {
 				$dealer = Branch::where('code',$data['branch_code'])->first();
 
 				if($dealer == false || $dealer->code != $data['dealer'])
-					return Response::json(array('success' => false,'error_message' => array('branch_code'=>'Control code mismatch')));
+					return Response::json(array('success' => false,'error_message' => array('branch_code'=>'Control code is incorrect')));
 
 				$newUser = $this->user_model->register($data);
 
 				if($newUser){
 
 					/*Send Email to Registered User*/
-					/*
 					$user_email = "Dear ".ucfirst($newUser->firstname)."<p></br></br>";
 					$user_email .= "You have successfully registered for the All-new Mitsubishi Strada Pre-Order Savings Exclusive. Below is the summary of your registration details:";
 					$user_email .= "<table>";
@@ -100,7 +102,6 @@ class AjaxController extends BaseController {
 					$email 		= mail($recepient, $subject, $message, $headers);
 
 					/*Send Email to Dealers*/
-					/*
 					$dealer_email = "New User Registration<p></br></br>";
 					$dealer_email .= "<table>";
 					$dealer_email .= "<tr><td>Name:</td><td>".ucfirst($newUser->firstname)." ".ucfirst($newUser->lastname)."</td></tr>";
@@ -127,7 +128,6 @@ class AjaxController extends BaseController {
 					$subject 	= "All New Strada Registration";
 					$message 	= $dealer_email;
 					$email 		= mail($recepient, $subject, $message, $headers); 
-					*/
 					return Response::json(array('success' => true,'data' => $newUser));
 				}
 				else{

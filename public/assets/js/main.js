@@ -51,6 +51,13 @@ $('form#register').submit(function(e){
                     $('.alert-danger').hide();
                     $('.alert-success').show();
                 }else{
+
+                    $('.alert-danger').text('Please fill up all fields');
+                    
+                    if(result.error_message.email != undefined && $('#email').val() != '') { $('.alert-danger').html(result.error_message.email); }
+                    if(result.error_message.branch_code != undefined && $('#branch_code').val() != '' && $('#dealer').val() != '') { $('.alert-danger').html(result.error_message.branch_code); }
+
+
                     $('.alert-success').hide();
                     $('.alert-danger').show();
                 }
@@ -75,8 +82,10 @@ $('form#edituser').submit(function(e){
                     $('.alert-danger').hide();
                     $('.alert-success').show();
                 }else{
+
                     $('.alert-success').hide();
                     $('.alert-danger').show();
+
                 }
                 $('html, body').stop().animate({scrollTop: $('#registration').offset().top - 106}, 1000,'easeOutQuart');
             },

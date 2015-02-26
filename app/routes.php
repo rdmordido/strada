@@ -23,7 +23,7 @@ Route::group(array('before' => 'auth.admin'), function()
 	Route::resource('/users','UserController');
 	Route::get('users/download','UserController@download');
 });
-
+/*
 Route::get('/secret/resetusertable',function(){
     DB::table('users')->delete();
     DB::table('users')->insert(array(
@@ -35,3 +35,4 @@ Route::get('/secret/resetusertable',function(){
          )
     ));
 });
+*/

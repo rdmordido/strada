@@ -41,13 +41,10 @@
             </div>
             <div class="content">
                 <p class="form-title">Personal Information</p>
-				<div class="alert alert-success alert-dismissable" style="display:none;">
-                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+				<div class="alert alert-success alert-dismissable" style="display:none;">                    
                     <strong>Success!</strong> You have been registered
                 </div>
                 <div class="alert alert-danger alert-dismissable" style="display:none;">
-                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                    Please fill up all fields
                 </div>
                 <form id="register">
                     <div class="clear">
