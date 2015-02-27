@@ -104,7 +104,8 @@ class UserController extends \BaseController {
 	public function download(){
 		  $data 	= User::where('role_id',3)->orderBy('branch_code','created_at')->get();
 		  $columns 	= array(
-		  				'branch_code'
+		  				 'created_at'
+		  				,'branch_code'
 		  				,'reference_code'
 		  				,'lastname'
 		  				,'firstname'
@@ -117,10 +118,19 @@ class UserController extends \BaseController {
 		  				,'civil_status'
 		  				,'occupation'
 		  				,'or_number'
-		  				,'created_at'
+		  				,'model'
+		  				,'sales'
+		  				,'color1'
+		  				,'color2'
+		  				,'color3'
+		  				,'current_brand_model'
+		  				,'like_most'
+		  				,'other_brand_model'
+		  				,'learn_source'
 		  			);
 		  $labels 	= array(
-		  				'Branch Code'
+		  				 'Date Registered'
+		  				,'Branch Code'
 		  				,'Reference Code'
 		  				,'Last Name'
 		  				,'First Name'
@@ -133,7 +143,15 @@ class UserController extends \BaseController {
 		  				,'Civil Status'
 		  				,'Occupation'
 		  				,'OR Number'
-		  				,'Date Registered'
+		  				,'Preferred Model/Variant'
+		  				,'Sales Executive'
+		  				,'1st Color Priority'
+		  				,'2nd Color Priority'
+		  				,'3rd Color Priority'
+		  				,'Are you a current pick-up owner? If yes, what brand and model?'
+		  				,'What do you like most about the Strada?'
+		  				,'Did you check out another pick-up brands? If yes, what brands and models?'
+		  				,'Where did you learn about the Strada?'
 		  			);
 		  $options 	= array(
 						 'filename' => 'allnewstrada.csv'

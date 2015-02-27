@@ -40,7 +40,10 @@ static function downloadCSV($data, $options)
      
     $output = '';    
     if (isset($options['firstRow']) && is_array($options['firstRow'])) {
-      $output .= implode(',', $options['firstRow']);
+      foreach ($options['firstRow'] as $label) {
+        $output .= '"'.$label.'"';
+        $output .= ',';
+      }
       $output .= "\n"; // new line after the first line
     }
     
@@ -53,7 +56,8 @@ static function downloadCSV($data, $options)
      
     foreach ($data as $row) {
       foreach ($columns as $column) {
-        $output .= str_replace(',', ';', $row->$column);
+        //$output .= str_replace(',', ';', $row->$column);
+        $output .= '"'.$row->$column.'"';
         $output .= ',';
       }
       $output .= "\n";
