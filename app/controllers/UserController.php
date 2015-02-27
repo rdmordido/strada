@@ -109,7 +109,7 @@ class UserController extends \BaseController {
 		  				,'reference_code'
 		  				,'lastname'
 		  				,'firstname'
-		  				,'m.i'
+		  				,'mi'
 		  				,'address'
 		  				,'phone'
 		  				,'email'
