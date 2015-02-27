@@ -135,7 +135,7 @@
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label style="display:none;" class="control-label" for="branch_code"></label>
-                                        <input type="text" id="branch_code" name="branch_code" class="form-control" placeholder="Control Code (provided by dealer)">
+                                        <input type="text" id="branch_code" name="branch_code" class="form-control" placeholder="7 Characters Control Code (provided by dealer)" maxlength="7">
                                     </div>    
                                 </div>
                             </div>
