@@ -54,10 +54,9 @@ static function downloadCSV($data, $options)
       $columns = array_keys($objectKeys);
     }
      
-    foreach ($data as $row) {
-      foreach ($columns as $column) {
-        //$output .= str_replace(',', ';', $row->$column);
-        $output .= '"'.$row->$column.'"';
+    foreach ($data as $rows) {
+      foreach ($rows as $row) {
+        $output .= '"'.$row.'"';
         $output .= ',';
       }
       $output .= "\n";

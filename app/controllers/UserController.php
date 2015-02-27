@@ -102,9 +102,10 @@ class UserController extends \BaseController {
 	}
 
 	public function download(){
-		  $data 	= User::where('role_id',3)->orderBy('branch_code','created_at')->get();
 		  $columns 	= array(
-		  				 'created_at'
+		  				 'users.created_at'
+		  				,'branches.name'
+		  				,'branches.company'
 		  				,'branch_code'
 		  				,'reference_code'
 		  				,'lastname'
@@ -112,7 +113,7 @@ class UserController extends \BaseController {
 		  				,'mi'
 		  				,'address'
 		  				,'phone'
-		  				,'email'
+		  				,'users.email'
 		  				,'age'
 		  				,'gender'
 		  				,'civil_status'
@@ -128,8 +129,19 @@ class UserController extends \BaseController {
 		  				,'other_brand_model'
 		  				,'learn_source'
 		  			);
+		  $data = DB::table('users')
+		  			->join('branches','users.branch_code','=','branches.code')
+		  			->join('dealers','branches.dealer_id','=','dealers.id')
+		  			->join('locations','branches.location_id','=','locations.id')
+		  			->select($columns)
+		  			->where('users.role_id',3)
+		  			->orderBy('users.branch_code','users.created_at')
+		  			->get();
+		  			
 		  $labels 	= array(
-		  				 'Date Registered'
+		  				 'Date Registered'		  				
+		  				,'Branch Name'
+		  				,'Company'
 		  				,'Branch Code'
 		  				,'Reference Code'
 		  				,'Last Name'
