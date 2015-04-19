@@ -1,5 +1,9 @@
 @extends('layouts.master')
 @section('content')
+<div id="banner" class="fullscreen" style="text-align:center">
+    <img src="/assets/img/launch print ad.jpg" width="90%" />
+</div>
+<?php /*
  <div id="banner" class="fullscreen">
         <div class="wrapper">
             <div id="the-banner">
@@ -7,8 +11,8 @@
                     <h1>₱55,000</h1>
                     <h2>Pre-Order Savings Exclusive</h2>
                     <h3>Reserve an all-new Mitsubishi Strada now!</h3>
-                    <p>Pay a reservation fee of P10,000 from February 25 to March 22, 2015 to avail of the <strong>Pre-Order Exclusive</strong>.</p>
-                    <a href="javascript:;" class="register-btn" data-href="registration">REGISTER NOW</a>
+                    <p>Pay a reservation fee of P10,000 until April 1, 2015 to avail of the <strong>Pre-Order Exclusive</strong>.</p>
+                    <!-- <a href="javascript:;" class="register-btn" data-href="registration">REGISTER NOW</a> -->
                 </div>
 
                 <div id="banner-footer" class="clear">
@@ -34,7 +38,8 @@
             </div>
         </div>
     </div>
-<div id="registration" class="fullscreen">
+*/?>
+<?php /* <div id="registration" class="fullscreen">
         <div class="wrapper">
             <div class="title">
                 <h1>REGISTRATION</h1>
@@ -287,7 +292,9 @@
                 </form>
             </div>
         </div>
-    </div>
+    </div> */ ?>
+
+<?php /*
    <div id="mechanics" class="fullscreen">
         <div class="wrapper">
             <div class="title">
@@ -307,7 +314,7 @@
                     
                     </li>
                     
-                    <li>Reservation must be made from February 25 to March 22, 2015 only.</li>
+                    <li>Reservation must be made from February 25 to April 1, 2015 only.</li>
                     
                     <li>The all-new Strada must be purchased on or before April 30, 2015 end of business hours.</li>
                     </ol>
@@ -356,7 +363,7 @@
                         <li>If the customer has not received his/her confirmation email within a day or two after making the reservation at the dealership, he/she is advised to contact their Sales Executive for follow up.</li>
                         <li>Reservation is transferable to immediate family members only (father, mother, brother, sister, husband, wife, son, or daughter). Immediate family members must present a photocopy of the registrant’s valid ID and their own when using the reservation.</li>
                         <li>The reservation payment is refundable.</li>
-                        <li>Deadline for online registration for the Pre-Order Exclusive will be on March 22, 2015 at 11:59PM.</li>
+                        <li>Deadline for online registration for the Pre-Order Exclusive will be on April 1, 2015 at 11:59PM.</li>
                     
                     </oL>
                     <!-- <p>All employees of Mitsubishi Motors Philippines Corporation, Beginnings Communications, Inc. and all employees of participating Mitsubishi dealers, including their relatives up to the second degree of affinity or consanguinity are disqualified from joining the promotion.</p> -->
@@ -367,14 +374,239 @@
             </div>
         </div>
     </div>
-    <div id="stradafeatures" class="fullscreen">
+*/?>
+    <div id="stradafeatures" class="fullscreen" style="margin-top:105px;">
         <div class="wrapper">
             <div class="title">
                 <h1>FEATURES</h1>
             </div>
             <div class="content">
-                <h2 align="center">Coming Soon! </h2>
+            	<!--
+                <p><img src="/assets/img/stradaflyer.jpg" width="100%" /></p>
+                <p><a href="/assets/downloads/2015_Strada info flyer-new-02 FA 2182015.jpg" class="register-btn">DOWNLOAD BROCHURE FRONT</a> &nbsp; <a href="/assets/downloads/2015_Strada info flyer-new-01 FA 2182015.jpg" class="register-btn">DOWNLOAD BROCHURE BACK</a></p>
+                -->
+                <div id="features-box" class="clearfix">
+                	<div class="sidebar">
+                    	<div class="sidebar-nav">
+                        	<ul>
+                            	<li><a href="javascript:;" class="parent" data-href="jline">J-Line</a></li>
+                                <li><a href="javascript:;" class="parent" data-href="mes">Interior Comfort</a>
+                                	<ul>
+                                    	<li><a href="javascript:;" class="child" data-href="mes">Multimedia Entertainment System </a></li>
+                                        <li><a href="javascript:;" class="child" data-href="ffsw">Full-Featured Steering Wheel</a></li>
+                                        <li><a href="javascript:;" class="child" data-href="cs">Cabin Space </a></li>
+                                        <li><a href="javascript:;" class="child" data-href="nsd">New Seat Design  </a></li>
+                                        <li><a href="javascript:;" class="child" data-href="sss">Start/Stop System </a></li>
+                                        <li><a href="javascript:;" class="child" data-href="kos">Keyless Operation System </a></li>
+                                        <li><a href="javascript:;" class="child" data-href="dzacc">Dual Zone Auto Climate Control </a></li>
+                                        <li><a href="javascript:;" class="child" data-href="edd">Ergonomically Designed Dashboard</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="javascript:;" class="parent" data-href="eds">Electronic Dial SS4-II</a></li>
+                                <li><a href="javascript:;" class="parent" data-href="ip">Improved Powertrain</a></li>
+                                <li><a href="javascript:;" class="parent" data-href="nsg">New Suspension Geometry</a></li>
+                                <li><a href="javascript:;" class="parent" data-href="ws">Water Screen</a></li>
+                                <li><a href="javascript:;" class="parent" data-href="tr">5.9m Turning Radius and 3.8 Lock to Lock Steering</a></li>
+                                <li><a href="javascript:;" class="parent" data-href="ad">Aerodynamic Design</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="features-panel">
+                    	<div id="jline" class="the-panel active">
+                        	<div class="panel-box">
+                                <div class="panel-img">
+                                	<img src="/assets/features/strada specs-01.jpg" width="100%" />
+                                </div>
+                                <div class="panel-text">
+                                    <h4>Engineering for comfort, space and maneuverability.</h4>
+									<p>The J-line is a clever engineering design to shorten wheelbase and maximize interior space. The increased space results in class-leading legroom for maximum comfort, making the all-new Strada a joy to drive.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="mes" class="the-panel">
+                        	<div class="panel-box">
+                                <div class="panel-img">
+                                	<img src="/assets/features/Multimedia Entertainment System.jpg" width="100%" />
+                                </div>
+                                <div class="panel-text">
+                                    <h4>Multimedia Entertainment System</h4>
+									<p>Wherever you're driving, the all-new Strada's assortment of entertainment features such as 6.75 inch QVGA touch panel display, USB/iPod compatibility, Bluetooth, GPS Navigation, AM/FM/CD Player, and MP3/WMA/AAC will make ride a lot more enjoyable.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="ffsw" class="the-panel">
+                        	<div class="panel-box">
+                                <div class="panel-img">
+                                	<img src="/assets/features/Strada-Steeringwheel.jpg" width="100%" />
+                                </div>
+                                <div class="panel-text">
+                                    <h4>Full-Featured Steering Wheel</h4>
+									<p>The all-new Strada’s steering wheel makes driving a lot more enjoyable. Paddle shifters simulate the excitement of manual driving. Its audio controls let your thumbs do the music shuffling while you do the driving. And lastly, cruise control makes long drives a lot more relaxing.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="cs" class="the-panel">
+                        	<div class="panel-box">
+                                <div class="panel-img">
+                                	<img src="/assets/features/Cabin Space.jpg" width="100%" />
+                                </div>
+                                <div class="panel-text">
+                                    <h4>Cabin Space</h4>
+									<p>The all-new Strada boasts car-like comfort like no other pick-up in the market can. With this tough-truck’s class-leading legroom and a wider cabin, you’re in for surprising comfort.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="nsd" class="the-panel">
+                        	<div class="panel-box">
+                                <div class="panel-img">
+                                	<img src="/assets/features/Gls Sport Seat-WEB.jpg" width="100%" />
+                                </div>
+                                <div class="panel-text">
+                                    <h4>New Seat Design</h4>
+									<p>The all-new Strada's improved seat design lets you comfortably conquer the road. </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="sss" class="the-panel">
+                        	<div class="panel-box">
+                                <div class="panel-img">
+                                	<img src="/assets/features/Start-Stop.jpg" width="100%" />
+                                </div>
+                                <div class="panel-text">
+                                    <h4>Start/Stop System</h4>
+									<p>An awesome driving experience all begins with just a press of your finger. One push and you’re good to go!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="kos" class="the-panel">
+                        	<div class="panel-box">
+                                <div class="panel-img">
+                                	<img src="/assets/features/Keyless.jpg" width="100%" />
+                                </div>
+                                <div class="panel-text">
+                                    <h4>Keyless Operation System</h4>
+									<p>As long as you have the intelligent key with you, the driver-side door will open with just a press of a button. This will also let you start the engine without having to use the keys.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="dzacc" class="the-panel">
+                        	<div class="panel-box">
+                                <div class="panel-img">
+                                	<img src="/assets/features/aircon.jpg" width="100%" />
+                                </div>
+                                <div class="panel-text">
+                                    <h4>Dual  Zone Auto Climate-Control</h4>
+									<p>Enhance your drive by keeping cool. This AC system lets you program different temperatures for the driver and the passenger.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="edd" class="the-panel">
+                        	<div class="panel-box">
+                                <div class="panel-img">
+                                	<img src="/assets/features/Dashboard.jpg" width="100%" />
+                                </div>
+                                <div class="panel-text">
+                                    <h4>Ergonomically-designed dashboard</h4>
+									<p>This aesthetically-pleasing black and grey dashboard is cleverly designed to have everything you need within sight and reach. </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="eds" class="the-panel">
+                        	<div class="panel-box">
+                                <div class="panel-img">
+                                	<img src="/assets/features/strada specs-02.jpg" width="100%" />
+                                </div>
+                                <div class="panel-text">
+                                    <h4>Electronic Dial SS4-II</h4>
+									<p>Technology for outstanding off-road performance and superior handling with the turn of a knob.</p>
+                                    <p>The Electronic Dial of the Super Select 4WD II not only gives you the advantage of full-time 4WD, but also offers 4 drive settings that allow you to react to whatever road conditions you may encounter. Not only does the system feature a center differential lock for outstanding off-road performance, but also controls the torque distribution between front and rear (40:60) for superior handling and easy operation.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="ip" class="the-panel">
+                        	<div class="panel-box">
+                                <div class="panel-img">
+                                	<img src="/assets/features/strada specs-08.jpg" width="100%" />
+                                </div>
+                                <div class="panel-text">
+                                    <h4>Improved Powertrain</h4>
+									<p>Technology for proven performance, power, and reliability with the improved high performance 4D56 engine.</p>
+                                    <p>Mitsubishi Motors’ reliable 2.5L Common Rail Direct Injection Diesel engine with Variable Geometry Turbo puts out an impressive 400 N-m of torque. Given the all-new Strada’s lightweight body, the engine has more than enough power to pull you out of tight spots or tow your favorite weekend craft.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="nsg" class="the-panel">
+                        	<div class="panel-box">
+                                <div class="panel-img">
+                                	<img src="/assets/features/strada specs-03.jpg" width="100%" />
+                                </div>
+                                <div class="panel-text">
+                                    <h4>New Suspension Geometry</h4>
+									<p>Engineering for durability, comfort, and a more refined ride.</p>
+                                    <p>New rear leaf spring geometry and extended length has been designed to give you added comfort without compromising load bearing ability of the all-new Strada. Still a workhorse with a one ton load capacity, the Strada still manages to achieve car-like ride comfort.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="ws" class="the-panel">
+                        	<div class="panel-box">
+                                <div class="panel-img">
+                                	<img src="/assets/features/strada specs-04.jpg" width="100%" />
+                                </div>
+                                <div class="panel-text">
+                                    <h4>Water Screen</h4>
+									<p>Technology for better visibility and safer driving in inclement weather.</p>
+                                    <p>An improved bumper design directs water spray outward when driving through puddles. This keeps the windshield clear so you can see what’s ahead.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tr" class="the-panel">
+                        	<div class="panel-box">
+                                <div class="panel-img">
+                                	<img src="/assets/features/strada specs-05.jpg" width="100%" />
+                                </div>
+                                <div class="panel-text">
+                                    <h4>5.9m Turning Radius and 3.8 Lock-to-Lock Steering</h4>
+									<p>Technology for easy maneuverability with a best in its class turning radius.</p>
+                                    <p>The shortened wheelbase together with the 3.8 turn lock to lock steering give the all-new Strada an impressive 5.9 meter turning radius, the best in its class. This allows the all-new Strada to take some of the tightest turns and make getting in and out of tight spots a breeze. </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="ad" class="the-panel">
+                        	<div class="panel-box">
+                                <div class="panel-img">
+                                	<img src="/assets/features/strada specs-07.jpg" width="100%" />
+                                </div>
+                                <div class="panel-text">
+                                    <h4>Aerodynamic Design</h4>
+                                    <p>Engineering for better noise reduction and fuel efficiency through improved aerodynamics.</p>
+									<p>The all-new Strada has been designed not only to look good, but with an eye on improving its aerodynamic profile. Top to bottom aerodynamics reduce air turbulence for quieter running performance, and better fuel efficiency.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+
+    <div id="pricelist" class="fullscreen">
+    	<div class="wrapper">
+        	<div class="title">
+				<h1>PRICE LIST</h1>
+            </div>
+            <div class="content">
+            	<br /><br /><br /><br />
+            	<table width="100%" class="price-list-table" border="1">
+                	<tr><td colspan="2" class="bgbgbg">ALL NEW STRADA SRP</td></tr>
+                    <tr><td>GL 4x2 M/T</td><td>               P 950,000 </td></tr>
+                    <tr><td>GLX 4x2 M/T</td><td>                P 1,058,000 </td></tr>
+                    <tr><td>GLX V 4x2 A/T</td><td>           P 1,158,000 </td></tr>
+                    <tr><td>GL 4x4 M/T</td><td>     P 1,125,000 </td></tr>
+                    <tr><td>GLS V 4x4 M/T</td><td>           P 1,320,000 </td></tr>
+                    <tr><td>GLS Sport V 4x4 A/T</td><td>      P 1,440,000 </td></tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
 @stop

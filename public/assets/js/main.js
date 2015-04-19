@@ -11,7 +11,23 @@ $(document).ready(function(e) {
 	var $ht = $(window).height() - 106;
 	$('.fullscreen,#the-banner').css({'min-height':$ht});
 
-
+	// features js
+	$('.sidebar-nav ul li a.parent').click(function(){
+		$('.sidebar-nav ul li a.parent').removeClass('active');
+		$(this).addClass('active');
+        $('.sidebar-nav ul li').removeClass('active');
+        $(this).parent().addClass('active');
+		var $panel = $(this).data('href');
+		$('.the-panel').hide().removeClass('active');
+		$('#'+$panel).show();
+	});
+    $('.sidebar-nav ul li a.child').click(function(){
+        $('.sidebar-nav ul li a.child').removeClass('active');
+        $(this).addClass('active');
+        var $panel = $(this).data('href');
+        $('.the-panel').hide().removeClass('active');
+        $('#'+$panel).show();
+    });
 /*========================================================================================================================================================================
 | ACTION SCRIPTS START
 /*========================================================================================================================================================================*/
